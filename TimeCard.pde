@@ -161,7 +161,7 @@ void saveTime() throws IOException{
 
 void dispose() {
     if(!saved) {
-        try { saveTime(); } catch (IOException e) { }
+        try { saveTime(); } catch (IOException e) { println("Did not save on exit"); }
     }
     try { flushTempFile(); } catch (IOException e) { }
 }
